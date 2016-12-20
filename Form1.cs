@@ -22,6 +22,7 @@ namespace allMyCircuts
             if (label1.Text == "Hello")
             {
 
+                label1.Text = "World";
             }
             else
             {
@@ -29,5 +30,14 @@ namespace allMyCircuts
 
             }
         }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        
     }
 }
