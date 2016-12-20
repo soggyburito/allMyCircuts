@@ -20,6 +20,7 @@ namespace allMyCircuts
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Text = "Hello";
+            button1.Text = "GoodBye";
         }
     }
 }
