@@ -19,14 +19,14 @@ namespace allMyCircuts
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text == "Hello")
+            if (label1.Text == "Hello")
             {
 
-                button1.Text = "GoodBye";
             }
             else
             {
-                button1.Text = "Hello";
+                label1.Text = "Hello";
+
             }
         }
     }
