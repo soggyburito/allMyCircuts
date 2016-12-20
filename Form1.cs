@@ -19,24 +19,68 @@ namespace allMyCircuts
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
+            lblDisplay.Text = "7";
+        }
 
-                label1.Text = "World";
-            }
-            else
-            {
-                label1.Text = "Hello";
+        private void btnEight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNine_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFour_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnFive_Click(object sender, EventArgs e)
         {
 
-            }
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSix_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTwo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDecimal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
