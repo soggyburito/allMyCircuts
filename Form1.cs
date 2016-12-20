@@ -17,16 +17,16 @@ namespace allMyCircuts
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Hello")
-            {
 
                 label1.Text = "World";
             }
             else
             {
                 label1.Text = "Hello";
+        private void btnFive_Click(object sender, EventArgs e)
+        {
 
             }
         }
@@ -37,6 +37,18 @@ namespace allMyCircuts
             this.Close();
         }
 
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         
     }
