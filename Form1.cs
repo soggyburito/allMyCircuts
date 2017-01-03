@@ -12,59 +12,66 @@ namespace allMyCircuts
 {
     public partial class Form1 : Form
     {
+        Model myModel;
+
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnSeven_Click(object sender, EventArgs e)
-        {
-            lblDisplay.Text = "7";
-        }
-
-        private void btnEight_Click(object sender, EventArgs e)
-        {
+            myModel = new Model();
 
         }
 
-        private void btnNine_Click(object sender, EventArgs e)
+        private void numButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnFour_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFive_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSix_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOne_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTwo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThree_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnZero_Click(object sender, EventArgs e)
-        {
-
+            //todo switch case for numbers
+            Button button = sender as Button;
+           // lblDisplay.Text = button.Text;
+            switch (button.Text)
+            {
+                case "0":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(0);
+                    break;
+                case "1":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(1);
+                    break;
+                case "2":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(2);
+                    break;
+                case "3":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(3);
+                    break;
+                case "4":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(4);
+                    break;
+                case "5":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(5);
+                    break;
+                case "6":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(6);
+                    break;
+                case "7":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(7);
+                    break;
+                case "8":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(8);
+                    break;
+                case "9":
+                    lblDisplay.Text = button.Text;
+                    myModel.num(9);
+                    break;
+                default:
+                    lblDisplay.Text = "ERROR";
+                    break;
+            }
         }
 
         private void btnDecimal_Click(object sender, EventArgs e)
@@ -101,6 +108,11 @@ namespace allMyCircuts
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = "0";
         }
 
         

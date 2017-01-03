@@ -8,8 +8,18 @@ namespace allMyCircuts
 {
     class Model
     {
+        int currentNum = 0;
+        int total = 0;
 
-       
+        public Model()
+        {
+
+        }
+
+        public void num(int newNum)
+        {
+            currentNum = newNum;
+        }
 
 
     }
