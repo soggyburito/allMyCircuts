@@ -11,6 +11,7 @@ namespace allMyCircuts
         int currentNum = 0;
         int total = 0;
         String displayNum;
+        String CurrentOperation;
         public Model()
         {
 
