@@ -10,7 +10,7 @@ namespace allMyCircuts
     {
         int currentNum = 0;
         int total = 0;
-
+        String displayNum;
         public Model()
         {
 
@@ -21,6 +21,12 @@ namespace allMyCircuts
             currentNum = newNum;
         }
 
+        public String getDisplayNum()
+        {
+            displayNum += currentNum.ToString();
+
+            return displayNum;
+        }
 
     }
 }

@@ -51,10 +51,11 @@
             // lblDisplay
             // 
             this.lblDisplay.AutoSize = true;
-            this.lblDisplay.Location = new System.Drawing.Point(241, 9);
+            this.lblDisplay.Location = new System.Drawing.Point(10, 9);
             this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(0, 13);
+            this.lblDisplay.Size = new System.Drawing.Size(13, 13);
             this.lblDisplay.TabIndex = 1;
+            this.lblDisplay.Text = "0";
             // 
             // numButton
             // 
@@ -251,7 +252,6 @@
             this.Controls.Add(this.lblDisplay);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
