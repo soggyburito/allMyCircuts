@@ -93,28 +93,30 @@ namespace allMyCircuts
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-
+            myModel.equal();
+           lblDisplay.Text =  myModel.getDisplayNum();
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            myModel.add();
+            
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            myModel.subtract();
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-
+            myModel.multiply();
         }
 
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-
+            myModel.divide();
         }
 
       /*  private void Form1_Load(object sender, EventArgs e)
