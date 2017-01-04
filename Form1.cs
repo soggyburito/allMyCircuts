@@ -87,7 +87,8 @@ namespace allMyCircuts
 
         private void btnDecimal_Click(object sender, EventArgs e)
         {
-
+            myModel.convertToDecimal();
+           // myModel.getDisplayNum();
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
@@ -123,7 +124,10 @@ namespace allMyCircuts
 
         private void clear_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text = "0";
+           
+            
+             myModel.clear();
+             lblDisplay.Text = "0";
         }
 
         
