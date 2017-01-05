@@ -15,7 +15,7 @@ namespace allMyCircuts
         double currentDouble = 0.0;
         double doubleTotal = 0.0;
         bool isDecimal = false;
-        String PrevOperation;
+
 
         public Model()
         {
@@ -30,48 +30,20 @@ namespace allMyCircuts
                 CurrentOperation = null;
             }
 
-            if (CurrentOperation == null)
+            if (isDecimal)
             {
-                if (isDecimal)
-                {
-                    displayNum += newNum.ToString();
-                    currentDouble = Convert.ToDouble(displayNum);
+                 displayNum += newNum.ToString();
+                 currentDouble = Convert.ToDouble(displayNum);
 
 
-                }
-                else
-                {
-                    displayNum += newNum.ToString();
-                    currentNum = Convert.ToInt16(displayNum);
-
-                }
             }
-            else 
+            else
             {
-                // displayNum = null;
-                doubleTotal = currentDouble;
-                total = currentNum;
+                  displayNum += newNum.ToString();
+                  currentNum = Convert.ToInt16(displayNum);
 
-               
-
-                if (isDecimal)
-                {
-                    displayNum += newNum.ToString();
-                    currentDouble = Convert.ToDouble(displayNum);
-
-                    
-                   // displayNum = doubleTotal.ToString();
                 }
-                else
-                {
-                    displayNum += newNum.ToString();
-                    currentNum = Convert.ToInt16(displayNum);
-
-                    
-                }//end inner esle
-
-               
-            }//endelse
+           
             
         }//end num
 
@@ -80,7 +52,7 @@ namespace allMyCircuts
             return displayNum;
         }
 
-            
+        
         
         public void clear()
         {
@@ -108,14 +80,20 @@ namespace allMyCircuts
 
         public void add()
         {
-            CurrentOperation = "+";
             
+            CurrentOperation = "+";
+            doubleTotal = currentDouble;
+            total = currentNum;
+            currentDouble = 0.0;
+            currentNum = 0;
             isDecimal = false;
             displayNum = null;
         }
 
         public void multiply()
         {
+            doubleTotal = currentDouble;
+            total = currentNum;  
             CurrentOperation = "*";
             isDecimal = false;
             displayNum = null;
@@ -123,6 +101,8 @@ namespace allMyCircuts
 
         public void subtract()
         {
+            doubleTotal = currentDouble;
+            total = currentNum;
             CurrentOperation = "-";
             isDecimal = false;
             displayNum = null;
@@ -130,6 +110,8 @@ namespace allMyCircuts
 
         public void divide()
         {
+            doubleTotal = currentDouble;
+            total = currentNum;
             CurrentOperation = "/";
             isDecimal = false;
             displayNum = null;
@@ -186,7 +168,7 @@ namespace allMyCircuts
                         break;
                 }
             }//end esle  
-            
+           
             currentDouble = doubleTotal;
             currentNum = total;
             CurrentOperation = "=";
