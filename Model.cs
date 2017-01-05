@@ -68,7 +68,7 @@ namespace allMyCircuts
                     currentNum = Convert.ToInt16(displayNum);
 
                     
-                }//end esle
+                }//end inner esle
 
                
             }//endelse
@@ -109,10 +109,6 @@ namespace allMyCircuts
         public void add()
         {
             CurrentOperation = "+";
-           // PrevOperation = CurrentOperation;
-           
-           // currentDouble = doubleTotal;
-           // currentNum = total;
             
             isDecimal = false;
             displayNum = null;
