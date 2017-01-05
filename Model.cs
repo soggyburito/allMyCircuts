@@ -23,43 +23,50 @@ namespace allMyCircuts
 
         public void num(int newNum)
         {
-          
-                if (CurrentOperation == null)
+            if (CurrentOperation == "=")
+            {
+                displayNum = null;
+                CurrentOperation = null;
+            }
+
+            if (CurrentOperation == null)
+            {
+                if (isDecimal)
                 {
-                    if (isDecimal)
-                    {
-                        displayNum += newNum.ToString();
-                        currentDouble = Convert.ToDouble(displayNum);
+                    displayNum += newNum.ToString();
+                    currentDouble = Convert.ToDouble(displayNum);
 
 
-                    }
-                    else
-                    {
-                        displayNum += newNum.ToString();
-                        currentNum = Convert.ToInt16(displayNum);
-
-                    }
                 }
                 else
                 {
-                    // displayNum = null;
-                    doubleTotal = currentDouble;
-                    total = currentNum;
-                    if (isDecimal)
-                    {
-                        displayNum += newNum.ToString();
-                        currentDouble = Convert.ToDouble(displayNum);
+                    displayNum += newNum.ToString();
+                    currentNum = Convert.ToInt16(displayNum);
 
-
-                    }
-                    else
-                    {
-                        displayNum += newNum.ToString();
-                        currentNum = Convert.ToInt16(displayNum);
-
-                    }
                 }
-           
+            }
+            else 
+            {
+                // displayNum = null;
+                doubleTotal = currentDouble;
+                total = currentNum;
+
+                if (isDecimal)
+                {
+                    displayNum += newNum.ToString();
+                    currentDouble = Convert.ToDouble(displayNum);
+
+
+                }
+                else
+                {
+                    displayNum += newNum.ToString();
+                    currentNum = Convert.ToInt16(displayNum);
+
+                }
+
+               
+            }
             
         }
 
@@ -173,10 +180,8 @@ namespace allMyCircuts
                         break;
                 }
             }//end esle
-            currentDouble = 0.0;
-            currentNum = 0;
-            total = 0;
-            doubleTotal = 0;
+            
+            CurrentOperation = "=";
         }//end equal
 
 
