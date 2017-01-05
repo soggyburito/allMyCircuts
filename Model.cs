@@ -15,6 +15,7 @@ namespace allMyCircuts
         double currentDouble = 0.0;
         double doubleTotal = 0.0;
         bool isDecimal = false;
+        String PrevOperation;
 
         public Model()
         {
@@ -51,24 +52,28 @@ namespace allMyCircuts
                 doubleTotal = currentDouble;
                 total = currentNum;
 
+               
+
                 if (isDecimal)
                 {
                     displayNum += newNum.ToString();
                     currentDouble = Convert.ToDouble(displayNum);
 
-
+                    
+                   // displayNum = doubleTotal.ToString();
                 }
                 else
                 {
                     displayNum += newNum.ToString();
                     currentNum = Convert.ToInt16(displayNum);
 
-                }
+                    
+                }//end esle
 
                
-            }
+            }//endelse
             
-        }
+        }//end num
 
         public String getDisplayNum()
         {
@@ -104,6 +109,11 @@ namespace allMyCircuts
         public void add()
         {
             CurrentOperation = "+";
+           // PrevOperation = CurrentOperation;
+           
+           // currentDouble = doubleTotal;
+           // currentNum = total;
+            
             isDecimal = false;
             displayNum = null;
         }
@@ -179,8 +189,10 @@ namespace allMyCircuts
                     default:
                         break;
                 }
-            }//end esle
+            }//end esle  
             
+            currentDouble = doubleTotal;
+            currentNum = total;
             CurrentOperation = "=";
         }//end equal
 
