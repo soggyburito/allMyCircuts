@@ -100,7 +100,7 @@ namespace allMyCircuts
         private void btnPlus_Click(object sender, EventArgs e)
         {
             myModel.add();
-           //lblDisplay.Text = myModel.getDisplayNum();
+          // lblDisplay.Text = myModel.getDisplayNum();
             
         }
 
