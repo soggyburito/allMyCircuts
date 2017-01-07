@@ -13,7 +13,7 @@ namespace allMyCircuts
     public partial class Form1 : Form
     {
         Model myModel;
-
+        double temp;
         public Form1()
         {
             InitializeComponent();
@@ -31,52 +31,52 @@ namespace allMyCircuts
                 case "0":
                   //  lblDisplay.Text = button.Text;
                    // myModel.getDisplayNum();
-                    myModel.num(0);
+                    myModel.num(0,0.0);
                     break;
                 case "1":
-                   // lblDisplay.Text = button.Text;
+                 // temp =  Convert.ToDouble(lblDisplay.Text) ;
                    // myModel.getDisplayNum();
-                    myModel.num(1);
+                    myModel.num(1,temp);
                     break;
                 case "2":
-                   // lblDisplay.Text = button.Text;
+                   // temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(2);
+                    myModel.num(2,temp);
                     break;
                 case "3":
-                  //  lblDisplay.Text = button.Text;
+                   // temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(3);
+                    myModel.num(3,temp);
                     break;
                 case "4":
-                  //  lblDisplay.Text = button.Text;
+                    //temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(4);
+                    myModel.num(4,temp);
                     break;
                 case "5":
-                   // lblDisplay.Text = button.Text;
+                   //temp =  Convert.ToDouble(lblDisplay.Text) ;
                   //  myModel.getDisplayNum();
-                    myModel.num(5);
+                    myModel.num(5,temp);
                     break;
                 case "6":
-                   // lblDisplay.Text = button.Text;
+                    //temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(6);
+                    myModel.num(6,temp);
                     break;
                 case "7":
-                   // lblDisplay.Text = button.Text;
+                   // temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(7);
+                    myModel.num(7,temp);
                     break;
                 case "8":
-                   // lblDisplay.Text = button.Text;
+                    //temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(8);
+                    myModel.num(8,temp);
                     break;
                 case "9":
-                   // lblDisplay.Text = button.Text;
+                   // temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(9);
+                    myModel.num(9,temp);
                     break;
                 default:
                     lblDisplay.Text = "ERROR";

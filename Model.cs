@@ -22,7 +22,7 @@ namespace allMyCircuts
 
         }
 
-        public void num(int newNum)
+        public void num(int newNum, double newDouble)
         {
             if (CurrentOperation == "=")
             {
@@ -31,7 +31,7 @@ namespace allMyCircuts
             }
             else if (CurrentOperation == "+" || CurrentOperation == "-" || CurrentOperation == "*" || CurrentOperation == "/")
             {
-                displayNum = null;
+               // displayNum = null;
                 if (isDecimal)
                 {
                     displayNum += newNum.ToString();
@@ -109,6 +109,7 @@ namespace allMyCircuts
                     if (isDecimal)
                     {
                         doubleTotal = currentDouble;
+                        isDecimal = false;
                     }
                     else
                     {
@@ -119,7 +120,7 @@ namespace allMyCircuts
                {
                    this.evaluate();
                }
-                isDecimal = false;
+                //isDecimal = false;
                  CurrentOperation = "+";
                // currentDouble = 0.0;
                 //currentNum = 0;
@@ -134,6 +135,7 @@ namespace allMyCircuts
                 if (isDecimal)
                 {
                     doubleTotal = currentDouble;
+                    isDecimal = false;
                 }
                 else
                 {
@@ -145,7 +147,7 @@ namespace allMyCircuts
                 this.evaluate();
             }
            
-            isDecimal = false;
+          //  isDecimal = false;
             CurrentOperation = "*";
             //currentDouble = 0.0;
             //currentNum = 0;
@@ -160,6 +162,7 @@ namespace allMyCircuts
                 if (isDecimal)
                 {
                      doubleTotal = currentDouble;
+                     isDecimal = false;
                 }
                 else
                 {
@@ -173,7 +176,7 @@ namespace allMyCircuts
                 this.evaluate();
             }
            
-            isDecimal = false;
+           // isDecimal = false;
              CurrentOperation = "-";
             //currentDouble = 0.0;
             //currentNum = 0;
@@ -185,15 +188,22 @@ namespace allMyCircuts
             
             if (total == 0 && doubleTotal == 0.0)
             {
-                doubleTotal = currentDouble;
-                total = currentNum;
+                if (isDecimal)
+                {
+                    doubleTotal = currentDouble;
+                    isDecimal = false;
+                }
+                else
+                {
+                    total = currentNum;
+                }
             }
             else
             {
                 this.evaluate();
             }
            CurrentOperation = "/";
-            isDecimal = false;
+           // isDecimal = false;
             
          
         }
@@ -202,7 +212,7 @@ namespace allMyCircuts
         {
             this.evaluate();
             CurrentOperation = "=";
-           
+            isDecimal = false;
            // operationSet = false;
         }//end equal
 
