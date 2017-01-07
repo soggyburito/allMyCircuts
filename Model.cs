@@ -29,8 +29,26 @@ namespace allMyCircuts
                 displayNum = null;
                 CurrentOperation = null;
             }
-            
-              
+            else if (CurrentOperation == "+" || CurrentOperation == "-" || CurrentOperation == "*" || CurrentOperation == "/")
+            {
+                displayNum = null;
+                if (isDecimal)
+                {
+                    displayNum += newNum.ToString();
+                    currentDouble = Convert.ToDouble(displayNum);
+
+
+                }
+                else
+                {
+                    displayNum += newNum.ToString();
+                    currentNum = Convert.ToInt16(displayNum);
+                }
+            }
+            else
+            {
+
+
                 if (isDecimal)
                 {
                     displayNum += newNum.ToString();
@@ -44,6 +62,7 @@ namespace allMyCircuts
                     currentNum = Convert.ToInt16(displayNum);
 
                 }
+            }
                // total = currentNum;
                 //doubleTotal = currentDouble;
             
@@ -83,8 +102,8 @@ namespace allMyCircuts
 
         public void add()
         {
-           
-                CurrentOperation = "+";
+           displayNum = null;
+               
                 if (total == 0 && doubleTotal == 0.0)
                 {
                     if (isDecimal)
@@ -101,15 +120,15 @@ namespace allMyCircuts
                    this.evaluate();
                }
                 isDecimal = false;
-                displayNum = null;
-                currentDouble = 0.0;
-                currentNum = 0;
+                 CurrentOperation = "+";
+               // currentDouble = 0.0;
+                //currentNum = 0;
             
         }
 
         public void multiply()
-        {
-            CurrentOperation = "*";
+        {displayNum = null;
+            
             if (total == 0 && doubleTotal == 0.0)
             {
                 if (isDecimal)
@@ -127,15 +146,15 @@ namespace allMyCircuts
             }
            
             isDecimal = false;
-            displayNum = null;
-            currentDouble = 0.0;
-            currentNum = 0;
+            CurrentOperation = "*";
+            //currentDouble = 0.0;
+            //currentNum = 0;
            
         }
 
         public void subtract()
-        {
-            CurrentOperation = "-";
+        {displayNum = null;
+           
             if (total == 0 && doubleTotal == 0.0)
             {
                 if (isDecimal)
@@ -155,15 +174,15 @@ namespace allMyCircuts
             }
            
             isDecimal = false;
-            displayNum = null;
-            currentDouble = 0.0;
-            currentNum = 0;
+             CurrentOperation = "-";
+            //currentDouble = 0.0;
+            //currentNum = 0;
             
         }
 
         public void divide()
-        {
-            CurrentOperation = "/";
+        {displayNum = null;
+            
             if (total == 0 && doubleTotal == 0.0)
             {
                 doubleTotal = currentDouble;
@@ -173,9 +192,9 @@ namespace allMyCircuts
             {
                 this.evaluate();
             }
-           
+           CurrentOperation = "/";
             isDecimal = false;
-            displayNum = null;
+            
          
         }
 
