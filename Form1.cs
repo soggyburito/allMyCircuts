@@ -112,6 +112,9 @@ namespace allMyCircuts
                 case"/":
                     myModel.operations("/");
                     break;
+                case"%":
+                    myModel.operations("%");
+                    break;
                 default:
                     break;
             }
