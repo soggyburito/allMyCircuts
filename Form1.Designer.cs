@@ -276,7 +276,6 @@
             this.Controls.Add(this.lblDisplay);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Click += new System.EventHandler(this.operationPressed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

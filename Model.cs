@@ -34,7 +34,10 @@ namespace allMyCircuts
             {
                 if (operationChanged)
                 {
-                    displayNum = null;
+                    if (displayNum != "-") {
+                        displayNum = null;
+                    }
+                    
                     operationChanged = false;
                 }
 
@@ -92,27 +95,39 @@ namespace allMyCircuts
         }
 
         public void convertToNegative(){
-           displayNum = displayNum.Insert(0, "-");
-           if (isDecimal || isDouble)
-           {
-              
-               currentDouble = Convert.ToDouble(displayNum);
+            if (displayNum == null)
+            {
+                displayNum = "-";
+            }
+            else if (currentNum == 0 || currentDouble == 0)
+            {
+                displayNum = "-";
+                
+            }
+            else
+            {
+                displayNum = displayNum.Insert(0, "-");
+                if (isDecimal || isDouble)
+                {
+
+                    currentDouble = Convert.ToDouble(displayNum);
 
 
-           }
-           else
-           {
-               
-               currentNum = Convert.ToInt16(displayNum);
+                }
+                else
+                {
 
-           }
+                    currentNum = Convert.ToInt16(displayNum);
+
+                }//end inner else
+            }// end outer else
 
         }
 
         public void operations(String newOp)
         {
            
-            displayNum = null;
+           // displayNum = null;
             if (total == 0 && doubleTotal == 0.0)
             {
                 doubleTotal = currentDouble;
@@ -127,29 +142,31 @@ namespace allMyCircuts
                     {
                         case "+":
                             doubleTotal += currentDouble;
-                            displayNum = doubleTotal.ToString();
+                            //displayNum = doubleTotal.ToString();
                             break;
                         case "-":
                             doubleTotal -= currentDouble;
-                            displayNum = doubleTotal.ToString();
+                            //displayNum = doubleTotal.ToString();
                             break;
                         case "*":
                             doubleTotal *= currentDouble;
-                            displayNum = doubleTotal.ToString();
+                           // displayNum = doubleTotal.ToString();
                             break;
                         case "/":
                             doubleTotal /= currentDouble;
-                            displayNum = doubleTotal.ToString();
+                           // displayNum = doubleTotal.ToString();
                             break;
                         case "%":
                             doubleTotal = doubleTotal%currentDouble;
-                            displayNum = doubleTotal.ToString();
+                          //  displayNum = doubleTotal.ToString();
                             break;
                         default:
                             displayNum = doubleTotal.ToString();
                             isDouble = false;
                             break;
                     }//end switch
+                    currentDouble = 0.0;
+                    displayNum = doubleTotal.ToString();
                 }
                 else
                 {
@@ -157,28 +174,30 @@ namespace allMyCircuts
                     {
                         case "+":
                             total += currentNum;
-                            displayNum = total.ToString();
+                          //  displayNum = total.ToString();
                             break;
                         case "-":
                             total -= currentNum;
-                            displayNum = total.ToString();
+                           // displayNum = total.ToString();
                             break;
                         case "*":
                             total *= currentNum;
-                            displayNum = total.ToString();
+                            //displayNum = total.ToString();
                             break;
                         case "/":
                             total /= currentNum;
-                            displayNum = total.ToString();
+                            //displayNum = total.ToString();
                             break;
                         case "%":
                             total = total%currentNum;
-                            displayNum = total.ToString();
+                            //displayNum = total.ToString();
                             break;
                         default:
                             displayNum = total.ToString();
                             break;
                     }//end switch
+                    currentNum = 0;
+                    displayNum = total.ToString();
                 }//end esle 
                 
             }//end else
