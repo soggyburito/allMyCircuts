@@ -46,6 +46,7 @@
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
+            this.btnModulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -227,11 +228,22 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
+            // btnModulo
+            // 
+            this.btnModulo.Location = new System.Drawing.Point(175, 172);
+            this.btnModulo.Name = "btnModulo";
+            this.btnModulo.Size = new System.Drawing.Size(75, 23);
+            this.btnModulo.TabIndex = 19;
+            this.btnModulo.Text = "%";
+            this.btnModulo.UseVisualStyleBackColor = true;
+            this.btnModulo.Click += new System.EventHandler(this.operationPressed);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnModulo);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMultiply);
@@ -252,6 +264,7 @@
             this.Controls.Add(this.lblDisplay);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.operationPressed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +290,7 @@
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button btnModulo;
     }
 }
 

@@ -123,6 +123,10 @@ namespace allMyCircuts
                             doubleTotal /= currentDouble;
                             displayNum = doubleTotal.ToString();
                             break;
+                        case "%":
+                            doubleTotal = doubleTotal%currentDouble;
+                            displayNum = doubleTotal.ToString();
+                            break;
                         default:
                             displayNum = doubleTotal.ToString();
                             isDouble = false;
@@ -147,6 +151,10 @@ namespace allMyCircuts
                             break;
                         case "/":
                             total /= currentNum;
+                            displayNum = total.ToString();
+                            break;
+                        case "%":
+                            total = total%currentNum;
                             displayNum = total.ToString();
                             break;
                         default:
