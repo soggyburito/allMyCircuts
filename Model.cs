@@ -91,6 +91,24 @@ namespace allMyCircuts
 
         }
 
+        public void convertToNegative(){
+           displayNum = displayNum.Insert(0, "-");
+           if (isDecimal || isDouble)
+           {
+              
+               currentDouble = Convert.ToDouble(displayNum);
+
+
+           }
+           else
+           {
+               
+               currentNum = Convert.ToInt16(displayNum);
+
+           }
+
+        }
+
         public void operations(String newOp)
         {
            

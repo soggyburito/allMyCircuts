@@ -127,6 +127,13 @@ namespace allMyCircuts
 
         } */
 
+        private void btnNegative_Click(object sender, EventArgs e)
+        {
+            myModel.convertToNegative();
+            lblDisplay.Text = myModel.getDisplayNum();
+        }
+
+
         private void clear_Click(object sender, EventArgs e)
         {
            

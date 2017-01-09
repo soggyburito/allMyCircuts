@@ -47,6 +47,7 @@
             this.btnDivide = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.btnModulo = new System.Windows.Forms.Button();
+            this.btnNegative = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -238,11 +239,22 @@
             this.btnModulo.UseVisualStyleBackColor = true;
             this.btnModulo.Click += new System.EventHandler(this.operationPressed);
             // 
+            // btnNegative
+            // 
+            this.btnNegative.Location = new System.Drawing.Point(94, 174);
+            this.btnNegative.Name = "btnNegative";
+            this.btnNegative.Size = new System.Drawing.Size(75, 23);
+            this.btnNegative.TabIndex = 20;
+            this.btnNegative.Text = "( - )";
+            this.btnNegative.UseVisualStyleBackColor = true;
+            this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnNegative);
             this.Controls.Add(this.btnModulo);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.btnDivide);
@@ -291,6 +303,7 @@
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button btnModulo;
+        private System.Windows.Forms.Button btnNegative;
     }
 }
 
