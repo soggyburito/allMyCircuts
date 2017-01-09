@@ -31,52 +31,52 @@ namespace allMyCircuts
                 case "0":
                   //  lblDisplay.Text = button.Text;
                    // myModel.getDisplayNum();
-                    myModel.num(0,0.0);
+                    myModel.num(0);
                     break;
                 case "1":
                  // temp =  Convert.ToDouble(lblDisplay.Text) ;
                    // myModel.getDisplayNum();
-                    myModel.num(1,temp);
+                    myModel.num(1);
                     break;
                 case "2":
                    // temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(2,temp);
+                    myModel.num(2);
                     break;
                 case "3":
                    // temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(3,temp);
+                    myModel.num(3);
                     break;
                 case "4":
                     //temp = Convert.ToDouble(lblDisplay.Text);
                    // myModel.getDisplayNum();
-                    myModel.num(4,temp);
+                    myModel.num(4);
                     break;
                 case "5":
                    //temp =  Convert.ToDouble(lblDisplay.Text) ;
                   //  myModel.getDisplayNum();
-                    myModel.num(5,temp);
+                    myModel.num(5);
                     break;
                 case "6":
                     //temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(6,temp);
+                    myModel.num(6);
                     break;
                 case "7":
                    // temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(7,temp);
+                    myModel.num(7);
                     break;
                 case "8":
                     //temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(8,temp);
+                    myModel.num(8);
                     break;
                 case "9":
                    // temp = Convert.ToDouble(lblDisplay.Text);
                   //  myModel.getDisplayNum();
-                    myModel.num(9,temp);
+                    myModel.num(9);
                     break;
                 default:
                     lblDisplay.Text = "ERROR";
@@ -91,37 +91,33 @@ namespace allMyCircuts
            // myModel.getDisplayNum();
         }
 
-        private void btnEquals_Click(object sender, EventArgs e)
+        private void operationPressed(object sender, EventArgs e)
         {
-            myModel.equal();
-           lblDisplay.Text =  myModel.getDisplayNum();
-        }
+            Button button = sender as Button;
 
-        private void btnPlus_Click(object sender, EventArgs e)
-        {
-            myModel.add();
-           lblDisplay.Text = myModel.getDisplayNum();
-            
-        }
-
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            myModel.subtract();
+            switch (button.Text)
+            {
+                case  "=":
+                    myModel.operations("=");
+                    break;
+                case"+":
+                    myModel.operations("+");
+                    break;
+                case"-":
+                    myModel.operations("-");
+                    break;
+                case"*":
+                    myModel.operations("*");
+                    break;
+                case"/":
+                    myModel.operations("/");
+                    break;
+                default:
+                    break;
+            }
             lblDisplay.Text = myModel.getDisplayNum();
         }
-
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            myModel.multiply();
-            lblDisplay.Text = myModel.getDisplayNum();
-        }
-
-
-        private void btnDivide_Click(object sender, EventArgs e)
-        {
-            myModel.divide();
-            lblDisplay.Text = myModel.getDisplayNum();
-        }
+ 
 
       /*  private void Form1_Load(object sender, EventArgs e)
         {
